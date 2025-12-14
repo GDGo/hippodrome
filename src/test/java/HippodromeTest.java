@@ -61,13 +61,13 @@ public class HippodromeTest {
     }
 
     @Test
-    @DisplayName("CheckConstructorHorseIllegalThrowEmptyListGetMessage")
+    @DisplayName("checkGetHorses")
     void checkGetHorses(){
         assertIterableEquals(hippodrome.getHorses(), horses);
     }
 
     @Test
-    @DisplayName("CheckConstructorHorseIllegalThrowEmptyListGetMessage")
+    @DisplayName("checkGetWinner")
     void checkGetWinner() {
         Horse horseWinner = hippodrome.getWinner();
         Horse horseWithMaxDist = horses.stream().max(Comparator.comparing(Horse::getDistance)).get();
